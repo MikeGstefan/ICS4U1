@@ -1,7 +1,11 @@
-//prints initals as X'
-//author: Mike Stefan
+
 package unit_0;
 
+/**
+ * prints initals as X'
+ * @author mike stefan
+ * 08/09
+ */
 public class A1E3 {
 	public static void main(String[] args) {
 		System.out.println("      XX     XX         XXXXXXX");

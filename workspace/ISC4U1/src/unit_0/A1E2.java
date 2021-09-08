@@ -1,8 +1,11 @@
-//prints name, address and school centered in terminal
-//@author Mike Stefan
 
 package unit_0;
 
+/**
+ * prints name, address and school centered with box in terminal
+ * @author mike stefan
+ * 08/09
+ */
 public class A1E2 {
 	public static void main(String[] args) {
 		System.out.println("                                                                                  XXXXXXXXXXXXXXXXXXXXXXXX");
