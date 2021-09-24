@@ -13,13 +13,13 @@ public class A2E3 {
 		
 		System.out.println("WOSS Gift Shop Receipt");
 		System.out.println("----------------------\n");
-		System.out.format("glove          $%.2f\n",glove);
-		System.out.format("toque          $%.2f\n",toque);
-		System.out.format("scarf          $%.2f\n",scarf);
+		System.out.format("glove          $%5.2f\n",glove);
+		System.out.format("toque          $%5.2f\n",toque);
+		System.out.format("scarf          $%5.2f\n",scarf);
 		System.out.println("              -------");
-		System.out.format("HST (%.0f%%)      $% .2f\n",(HST*100), total*HST);
+		System.out.format("HST (%.0f%%)      $%5.2f\n",(HST*100), total*HST);
 		System.out.println("              -------");
-		System.out.format("TOTAL          $%.2f\n",total+(total*HST));
+		System.out.format("TOTAL          $%5.2f\n",total+(total*HST));
 		
 	}
 
