@@ -54,10 +54,14 @@ public class StefanLoop {
 		System.out.println("Month \t Initial Amount \tInterest \tPrincipal Paid \tAmount Remaining");
 		while(princ > 0) {
 			paid = pay - (princ*interest/12);
-			if( (princ - paid) <0)
-				paid = princ ;
 			
-			System.out.format("%2d \t $%9.2f\t\t$%6.2f\t\t$%7.2f\t$%9.2f\n", month, princ, (princ*interest/12), paid, princ - paid);
+			//if this is last payment
+			if( (princ - paid) <0) {
+				paid = princ ;
+				System.out.format("%2d \t $%9.2f\t\t$%6.2f\t\t$%7.2f\t$%9.2f\n", month, princ, (princ*interest/12), paid+(princ*interest/12), princ - paid);
+			}
+			else
+				System.out.format("%2d \t $%9.2f\t\t$%6.2f\t\t$%7.2f\t$%9.2f\n", month, princ, (princ*interest/12), paid, princ - paid);
 			princ -= paid;
 			month++;
 		}
