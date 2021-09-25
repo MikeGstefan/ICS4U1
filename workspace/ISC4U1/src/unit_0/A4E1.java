@@ -11,21 +11,22 @@ public class A4E1 {
 //		double item1 = 3.0;
 //		double item2 = 1.20;
 //		double item3 = 1.00;
-//		double total = item1 + item2 + item3;
+//		double price = item1 + item2 + item3;
 //		final double HST = 0.13, REDUCED_TAX = 0.05;
 //		double tax;
-//		if(total <= 4.0)tax =REDUCED_TAX;
+//		if(price <= 4.0)tax =REDUCED_TAX;
 //		else tax=HST;
 //		
 //		System.out.format("Item one:     $ %.2f\n",item1);
 //		System.out.format("Item two:     $ %.2f\n",item2);
 //		System.out.format("Item three:   $ %.2f\n",item3);
 //		System.out.println("              -------");
-//		System.out.format("HST (%2.0f%%)     $%5.2f\n",(tax*100), total*tax);
+//		System.out.format("HST (%2.0f%%)     $%5.2f\n",(tax*100), price*tax);
 //		System.out.println("              -------");
-//		System.out.format("Total cost:   $ %.2f\n",total+ (total*tax));
+//		System.out.format("price cost:   $ %.2f\n",price+ (price*tax));
 		
 		//sets up constants and user input
+		System.out.print("Enter total price: ");
 		Scanner input = new Scanner(System.in);
 		double price = input.nextDouble();
 		final double HST = 0.13, REDUCED_TAX = 0.05, THRESHOLD = 4.0;
@@ -35,8 +36,11 @@ public class A4E1 {
 		if(price <= THRESHOLD)tax =REDUCED_TAX;
 		else tax=HST;
 		
-		//output
-		System.out.format("Total cost:   $ %.2f\n",price+ (price*tax));
+		System.out.format("Price:        $%5.2f\n",price);
+		System.out.println("              -------");
+		System.out.format("HST (%2.0f%%)     $%5.2f\n",(tax*100), price*tax);
+		System.out.println("              -------");
+		System.out.format("price cost:   $%5.2f\n",price+ (price*tax));
 	}
 
 }
