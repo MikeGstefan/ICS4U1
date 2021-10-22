@@ -27,26 +27,19 @@ public class Planets {
         g.fillOval(x, y, 150, 150);
     }
     public void drawLight() {
-    	int start_r = 242, start_g = 244, b = 255, r = 0, g = 0;
-    	double r_percent = (double)start_r/b, g_percent =(double)start_g/b;
-    	System.out.println(r_percent + " " + g_percent);
-    	int size = sun_size +255*2, size_inc = 2;
-    	double increment = 0.2;
-//    	for(int i = 255; i >=0; i--) {
+    	int start_r = 242, start_g = 244, start_b = 255, b = 255, r = 0, g = 0;
+    	int size = sun_size +255, size_inc = 2;
     	int i = 0;
     	double percent =0;
     	while(i <=254) {
-    		System.out.println(r+" "+ g+ " "+ b + " " +size + " "+percent);
-   
-    		r = (int)(Math.pow(i,4)/Math.pow(242.0,3));
-    		g = (int)(Math.pow(i,4)/Math.pow(244.0,3));
-    		b = (int)(Math.pow(i,4)/Math.pow(255.0,3));    		
+    		r = (int)(Math.pow(i,3)/Math.pow(242.0,2));
+    		g = (int)(Math.pow(i,3)/Math.pow(244.0,2));
+    		b = (int)(Math.pow(i,3)/Math.pow(255.0,2));    		
     		if(r > start_r)r=start_r;
     		if(g >start_g)g=start_g;
-    		if(b < 0)b = 0;
+    		if(b >start_b)b = start_b;
     		size -= size_inc;
     		i+=size_inc;
-    		System.out.println(r+" "+ g+ " "+ b + " " +size + " "+percent);
     		this.g.setColor(new Color(r,g,b));
     		this.g.fillOval(this.x - (size-sun_size)/2,this.y - (size-sun_size)/2,size,size);
     	}

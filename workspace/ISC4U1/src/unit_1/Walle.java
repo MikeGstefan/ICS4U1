@@ -15,11 +15,12 @@ public class Walle extends Canvas{
 
 	}
 	public void paint(Graphics g) {
-//		this.setBackground(Color.BLACK);
-		Stars star = new Stars(800,370,g,200,1,3);
-		star.draw_stars();
+		this.setBackground(Color.BLACK);
+		
 		Planets planet = new Planets(110, 70, g);
 		planet.drawLight();
+		Stars star = new Stars(800,370,g,200,1,3);
+		star.draw_stars();
 	    planet.drawSun();
 	    planet.drawEarth();
 	    
