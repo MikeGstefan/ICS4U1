@@ -10,7 +10,7 @@ public class Bank {
 		Account test = new Account(1123241);
 		test.deposit(324.34);
 		System.out.println(test.getBalance());
-		test.withdraw(34.34);
+		test.withdraw(1);
 		System.out.println(test.getBalance());
 
 	}
