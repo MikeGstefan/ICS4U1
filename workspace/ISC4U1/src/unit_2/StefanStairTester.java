@@ -19,11 +19,11 @@ public class StefanStairTester {
 		//how far from the robots starting position the first stair should be
 		int stairStart = 2;
 		//how many steps up are wanted
-		int stairUpLen = 2; 
+		int stairUpLen = 5; 
 		//how long is the top platform of the stairs
 		int stairTopLen = 2;
 		//how many steps down are wanted
-		int stairDownLen = 4;
+		int stairDownLen = 1;
 		//how far from the last step should the garbage be
 		int garbageDist = 2;
 		
