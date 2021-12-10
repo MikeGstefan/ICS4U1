@@ -22,9 +22,9 @@ public class mountain extends Canvas{
 		int corner1 = (y1 + y2)/2;
 		int corner2 = (y1 + y3)/2;
 		int corner3 = (y3 + y2)/2;
-		int off1 = rand.nextInt((int)((y1 + y2)/20))*randSgn();
-		int off2 = rand.nextInt((int)((y1 + y3)/20))*randSgn();
-		int off3 = rand.nextInt((int)((y3 + y2)/20))*randSgn();
+		int off1 = rand.nextInt((int)((y1 + y2)/25))*randSgn();
+		int off2 = rand.nextInt((int)((y1 + y3)/25))*randSgn();
+		int off3 = rand.nextInt((int)((y3 + y2)/25))*randSgn();
 		corner1 += m1;
 		corner2 += m2;
 		corner3 += m3;
@@ -38,9 +38,9 @@ public class mountain extends Canvas{
 //			drawMountain((x1 + x2)/2, corner1, (x3 + x2)/2, corner3, (x1 + x3)/2, corner2, l,m1,m2,m3, g);
 //			drawMountain((x1 + x2)/2, corner1, (x3 + x2)/2, corner3, (x1 + x3)/2, corner2, l,corner1,corner2,corner3, g);
 //			
-			drawMountain(x1, y1, (x1 + x2)/2, corner1, (x1 + x3)/2, corner2, l,0,0,off3, g);
-			drawMountain(x2, y2, (x2 + x1)/2, corner1, (x2 + x3)/2, corner3, l,0,0,off3, g);
-			drawMountain(x3, y3, (x3 + x2)/2, corner3, (x1 + x3)/2, corner2, l,0,0,off3, g);
+			drawMountain(x1, y1, (x1 + x2)/2, corner1, (x1 + x3)/2, corner2, l,off1,off2,off3, g);
+			drawMountain(x2, y2, (x2 + x1)/2, corner1, (x2 + x3)/2, corner3, l,off1,off2,off3, g);
+			drawMountain(x3, y3, (x3 + x2)/2, corner3, (x1 + x3)/2, corner2, l,off1,off2,off3, g);
 //			corner1 -= off1;
 //			corner2 -= off2;
 //			corner3 -= off3;
