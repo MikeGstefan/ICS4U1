@@ -1,15 +1,15 @@
-package game;
-
+package unit_2;
 
 import java.awt.*;
+
 import javax.swing.JFrame;
 
-public class game extends Canvas{
+public class chartest extends Canvas{
 
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("");
-		Canvas canvas = new game();
-		canvas.setSize(400,400);
+		Canvas canvas = new chartest();
+		canvas.setSize(200,200);
 		frame.add(canvas);
 		frame.pack();
 		frame.setVisible(true);
@@ -20,8 +20,7 @@ public class game extends Canvas{
 	}
 	public void paint(Graphics g) {
 		this.setBackground(Color.WHITE);
-		Element test = new Element(100,100,30,Color.BLACK,g );
-		
+		Character test = new StefanChar(100,100,g);
+		test.draw();
 	}
-
 }

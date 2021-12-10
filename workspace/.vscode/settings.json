@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Mike\\Documents\\school\\ICS4U1\\becker.jar"
+    ]
+}
