@@ -38,6 +38,10 @@ public class Sorting {
 			count = 0;
 		}
 		System.out.println(System.currentTimeMillis() - start);
+		for( int i = 0; i < sorted.size(); i++) {
+			System.out.println(sorted.get(i));
+		}
+		System.out.println(sorted.size());
 	}
 	
 

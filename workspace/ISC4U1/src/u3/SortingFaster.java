@@ -24,20 +24,49 @@ public class SortingFaster {
 //		sorted.add(unsorted.get(0));
 		boolean end = true;
 		System.out.println(sorted.size());
-		for(int i = 0; i < unsorted.size(); i++) {
-			end = true;
-			for(int j = 0; j < sorted.size(); j ++) {
-				if(unsorted.get(i) <sorted.get(j)) {
-					sorted.add(j, unsorted.get(i));
-					end = false;
-					break;
+//		for(int i = 1; i < unsorted.size(); i++) {
+//			if((unsorted.get(i) < unsorted.get(i-1))) {
+//				for(int j = 0; j < i; j++) {
+//					
+//					if(unsorted.get(i) < unsorted.get(j)) {
+//						unsorted.add(j, unsorted.get(i));
+//						unsorted.remove(i+1);
+//						break;
+//					} 
+//				}
+//			}
+//			
+//		}
+		for(int i = 1; i < unsorted.size(); i++) {
+			if((unsorted.get(i) < unsorted.get(i-1))) {
+				if(unsorted.get(i) < unsorted.get(i/2)) {
+						for(int j = 0; j < i/2+1; j++) {
+							if(unsorted.get(i) < unsorted.get(j)) {
+								unsorted.add(j, unsorted.get(i));
+								unsorted.remove(i+1);
+								break;
+							}
+						}
 				}
+				else {
+					for(int j = i/2; j < i; j++) {
+						if(unsorted.get(i) < unsorted.get(j)) {
+							unsorted.add(j, unsorted.get(i));
+							unsorted.remove(i+1);
+							break;
+						}
+					}
+				}
+
 			}
-			if(end)sorted.add(i);
-			
 			
 		}
 		System.out.println(System.currentTimeMillis() - start);
+		
+		for( int i = 0; i < unsorted.size(); i++) {
+			System.out.println(unsorted.get(i));
+		}
+
 	}
 
 }
